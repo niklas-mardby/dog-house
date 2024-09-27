@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+	/* to be able to move footer to bottom of page */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	display: flex;
+}
+
+#add-dog-form,
+section {
+	border: 2px solid rebeccapurple;
+	padding: 2rem;
+	width: 50%;
+	margin: 1rem;
+
+	h2 {
+		margin: 0 0 0.5rem 0;
+	}
+}
+
+form {
+	p {
+		margin: 0px;
+	}
+	input[type="text"] {
+		width: 100%;
+	}
+	button {
+		margin-top: 0.5rem;
+	}
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+
+	div {
+		border: 1px solid rebeccapurple;
+		padding: 0.5rem;
+	}
+}
+header,
+footer {
+	padding: 2rem;
+	background-color: rebeccapurple;
+	color: white;
+
+	a {
+		color: white;
+	}
+}
+
+footer {
+	margin-top: auto;
+}
