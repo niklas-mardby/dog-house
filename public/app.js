@@ -1,3 +1,18 @@
+// alla hundraser i en array
+const dogRaces = ["greyhound", "bulldog", "pitbull", "pug", "husky"];
+
+// fyll en dropdown med alla hundraser
+// skapa HTML element för select-taggen (vår dropdown)
+const dogRaceSelect = document.querySelector("#dog-race");
+
+// loopa igenom arrayen med hundraser och ta varje hundras och lägg till som en ny option-tagg
+for (const dogRace of dogRaces) {
+	const newRaceOption = document.createElement("option");
+	newRaceOption.innerHTML = dogRace;
+	newRaceOption.value = dogRace;
+	dogRaceSelect.appendChild(newRaceOption);
+}
+
 // skapa HTML element och lagra i addButton
 const addButton = document.querySelector("button");
 
@@ -18,7 +33,7 @@ addButton.addEventListener("click", (e) => {
 		const newDogDiv = document.createElement("div");
 
 		//lägg hundens namn från textfältet i diven
-		newDogDiv.innerHTML = dogName;
+		newDogDiv.innerHTML = `${dogName} (${dogRaceSelect.value})`;
 
 		// lägg till div i section
 		document.querySelector("section").appendChild(newDogDiv);

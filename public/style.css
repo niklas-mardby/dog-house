@@ -32,10 +32,12 @@ form {
 	p {
 		margin: 0px;
 	}
-	input[type="text"] {
+	input[type="text"],
+	select {
 		width: 100%;
 	}
-	button {
+	button,
+	label p {
 		margin-top: 0.5rem;
 	}
 }
@@ -43,6 +45,7 @@ form {
 section {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: flex-start;
 	gap: 0.5rem;
 
 	div {
