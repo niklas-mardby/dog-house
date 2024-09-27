@@ -1,5 +1,8 @@
 // alla hundraser i en array
 const dogRaces = ["greyhound", "bulldog", "pitbull", "pug", "husky"];
+const dogs = [];
+
+const numberOfDogsSpan = document.querySelector("#number-of-dogs");
 
 // fyll en dropdown med alla hundraser
 // skapa HTML element för select-taggen (vår dropdown)
@@ -34,6 +37,8 @@ addButton.addEventListener("click", (e) => {
 
 		//lägg hundens namn från textfältet i diven
 		newDogDiv.innerHTML = `${dogName} (${dogRaceSelect.value})`;
+		dogs.push({ dogname: "namn", dograce: "rasen" });
+		numberOfDogsSpan.innerHTML = dogs.length;
 
 		// lägg till div i section
 		document.querySelector("section").appendChild(newDogDiv);
